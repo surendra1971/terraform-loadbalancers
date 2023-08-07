@@ -3,6 +3,7 @@ module "alb-public" {
   ENV                         = var.ENV
   INTERNAL                    = false 
   ALB_NAME                    = "robot-public-alb"
+  LB_TYPE                     = "external"
 }
 
 module "alb-private" {
@@ -10,5 +11,6 @@ module "alb-private" {
   ENV                         = var.ENV
   INTERNAL                    = true 
   ALB_NAME                    = "robot-private-alb"
+  LB_TYPE                     = "internal"
 }
 
